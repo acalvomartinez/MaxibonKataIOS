@@ -11,16 +11,23 @@ import Foundation
 public final class KarumiHQs {
     
     fileprivate let chat: Chat
+    var maxibonLeft: Int
     
     convenience init() {
         self.init(chat: Slack()) 
     }
     
-    init(chat: Chat) {
-        self.chat = chat
+    init(maxibonLeft: Int) {
+        self.chat = Slack()
+        self.maxibonLeft = maxibonLeft
     }
     
-    var maxibonLeft = 10
+    init(chat: Chat, maxibonLeft: Int = 10) {
+        self.chat = chat
+        self.maxibonLeft = maxibonLeft
+    }
+    
+    
     fileprivate var shouldBuyMoreMaxibons: Bool {
         return maxibonLeft <= 2
     }

@@ -56,6 +56,13 @@ class KarumiHQsSpec: XCTestCase {
         
         assert(karumiHQs.maxibonLeft == 4)
     }
+    
+    func testArbitrary() {
+        property("KarumiHQs is created properlly") <- forAll(KarumiHQs.arbitrary, Developer.arbitraryNotSoHungry) { (karumiHQs: KarumiHQs, developer: Developer) in
+            karumiHQs.openFridge(developer)
+            return karumiHQs.maxibonLeft > 2
+        }
+    }
 
 }
  
