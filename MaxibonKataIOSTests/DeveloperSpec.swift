@@ -20,11 +20,19 @@ class DeveloperSpec: XCTestCase {
             return developer.numberOfMaxibonsToGet >= 0
         }
         
+        // Do NOT use this kind of test!
         property("developer is created properlly") <- forAll { (name: String, numberOfMaxibons: Int) in
             print("\(name) \(numberOfMaxibons)")
             let developer = Developer(name: name, numberOfMaxibonsToGet: numberOfMaxibons)
             return developer.name == name && (developer.numberOfMaxibonsToGet == numberOfMaxibons || developer.numberOfMaxibonsToGet == 0)
         }
+        
+        property("developer is created properlly") <- forAll { (name: String, numberOfMaxibons: NonNegative<Int>) in
+            print("\(name) \(numberOfMaxibons.getNonNegative)")
+            let developer = Developer(name: name, numberOfMaxibonsToGet: numberOfMaxibons.getNonNegative)
+            return developer.name == name && developer.numberOfMaxibonsToGet == numberOfMaxibons.getNonNegative
+        }
+        
     }
 
 
