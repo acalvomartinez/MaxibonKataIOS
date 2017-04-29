@@ -18,7 +18,7 @@ public struct Developer {
     }
 }
 
-open class Karumies {
+open class Developers {
     open static let Pedro = Developer(name: "Pedro", numberOfMaxibonsToGet: 3)
     open static let Jorge = Developer(name: "Jorge", numberOfMaxibonsToGet: 2)
     open static let Fran = Developer(name: "Fran", numberOfMaxibonsToGet: 3)

@@ -32,8 +32,5 @@ class DeveloperSpec: XCTestCase {
             let developer = Developer(name: name, numberOfMaxibonsToGet: numberOfMaxibons.getNonNegative)
             return developer.name == name && developer.numberOfMaxibonsToGet == numberOfMaxibons.getNonNegative
         }
-        
     }
-
-
 }

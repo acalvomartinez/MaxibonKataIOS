@@ -11,6 +11,9 @@
 		BC9F3DB3D6BA81F0D12BB06B /* Pods_MaxibonKataIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2544E92D89A2293E5C76FC0F /* Pods_MaxibonKataIOS.framework */; };
 		E2E8D7591EB48B60003B6154 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D7581EB48B60003B6154 /* Developer.swift */; };
 		E2E8D75C1EB48D11003B6154 /* DeveloperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D75B1EB48D11003B6154 /* DeveloperSpec.swift */; };
+		E2E8D75E1EB4944A003B6154 /* KarumiHQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D75D1EB4944A003B6154 /* KarumiHQs.swift */; };
+		E2E8D7631EB49825003B6154 /* KarumiHQsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D7621EB49825003B6154 /* KarumiHQsSpec.swift */; };
+		E2E8D7661EB49D6B003B6154 /* ArbitaryDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D7651EB49D6B003B6154 /* ArbitaryDeveloper.swift */; };
 		EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0A1D24415F00838900 /* AppDelegate.swift */; };
 		EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0C1D24415F00838900 /* ViewController.swift */; };
 		EBC26D101D24415F00838900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D0E1D24415F00838900 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		E2E8D7581EB48B60003B6154 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		E2E8D75A1EB48D11003B6154 /* MaxibonKataIOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaxibonKataIOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E2E8D75B1EB48D11003B6154 /* DeveloperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperSpec.swift; sourceTree = "<group>"; };
+		E2E8D75D1EB4944A003B6154 /* KarumiHQs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQs.swift; sourceTree = "<group>"; };
+		E2E8D7621EB49825003B6154 /* KarumiHQsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQsSpec.swift; sourceTree = "<group>"; };
+		E2E8D7651EB49D6B003B6154 /* ArbitaryDeveloper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArbitaryDeveloper.swift; sourceTree = "<group>"; };
 		E8BFEA222C6BA5A65940E65E /* Pods-MaxibonKataIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS.release.xcconfig"; sourceTree = "<group>"; };
 		EBC26D071D24415F00838900 /* MaxibonKataIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaxibonKataIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC26D0A1D24415F00838900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E2E8D7641EB49D33003B6154 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8D7651EB49D6B003B6154 /* ArbitaryDeveloper.swift */,
+			);
+			name = Generators;
+			sourceTree = "<group>";
+		};
 		EBC26CFE1D24415F00838900 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +140,9 @@
 		EBC26D1E1D24415F00838900 /* MaxibonKataIOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				E2E8D7641EB49D33003B6154 /* Generators */,
 				EBC26D211D24415F00838900 /* Info.plist */,
+				E2E8D7621EB49825003B6154 /* KarumiHQsSpec.swift */,
 				E2E8D75B1EB48D11003B6154 /* DeveloperSpec.swift */,
 				E2E8D75A1EB48D11003B6154 /* MaxibonKataIOSTests-Bridging-Header.h */,
 			);
@@ -138,6 +154,7 @@
 			children = (
 				EBCD24271D2457310007923F /* Chat */,
 				E2E8D7581EB48B60003B6154 /* Developer.swift */,
+				E2E8D75D1EB4944A003B6154 /* KarumiHQs.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -354,6 +371,7 @@
 				E2E8D7591EB48B60003B6154 /* Developer.swift in Sources */,
 				EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */,
 				EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */,
+				E2E8D75E1EB4944A003B6154 /* KarumiHQs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E8D7661EB49D6B003B6154 /* ArbitaryDeveloper.swift in Sources */,
+				E2E8D7631EB49825003B6154 /* KarumiHQsSpec.swift in Sources */,
 				E2E8D75C1EB48D11003B6154 /* DeveloperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
