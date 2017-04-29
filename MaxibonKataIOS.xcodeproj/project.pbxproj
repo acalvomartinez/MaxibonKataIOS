@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E0076DA71B6357DC7B49CE7 /* Pods_MaxibonKataIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA91912154A164DBF90453 /* Pods_MaxibonKataIOSTests.framework */; };
 		BC9F3DB3D6BA81F0D12BB06B /* Pods_MaxibonKataIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2544E92D89A2293E5C76FC0F /* Pods_MaxibonKataIOS.framework */; };
+		E2E8D7591EB48B60003B6154 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D7581EB48B60003B6154 /* Developer.swift */; };
+		E2E8D75C1EB48D11003B6154 /* DeveloperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8D75B1EB48D11003B6154 /* DeveloperSpec.swift */; };
 		EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0A1D24415F00838900 /* AppDelegate.swift */; };
 		EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0C1D24415F00838900 /* ViewController.swift */; };
 		EBC26D101D24415F00838900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D0E1D24415F00838900 /* Main.storyboard */; };
@@ -31,6 +33,9 @@
 		2544E92D89A2293E5C76FC0F /* Pods_MaxibonKataIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaxibonKataIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FA91912154A164DBF90453 /* Pods_MaxibonKataIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaxibonKataIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8672D19BF26C279DBF51A859 /* Pods-MaxibonKataIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOSTests/Pods-MaxibonKataIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2E8D7581EB48B60003B6154 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		E2E8D75A1EB48D11003B6154 /* MaxibonKataIOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaxibonKataIOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2E8D75B1EB48D11003B6154 /* DeveloperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperSpec.swift; sourceTree = "<group>"; };
 		E8BFEA222C6BA5A65940E65E /* Pods-MaxibonKataIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS.release.xcconfig"; sourceTree = "<group>"; };
 		EBC26D071D24415F00838900 /* MaxibonKataIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaxibonKataIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC26D0A1D24415F00838900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				EBC26D211D24415F00838900 /* Info.plist */,
+				E2E8D75B1EB48D11003B6154 /* DeveloperSpec.swift */,
+				E2E8D75A1EB48D11003B6154 /* MaxibonKataIOSTests-Bridging-Header.h */,
 			);
 			path = MaxibonKataIOSTests;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				EBCD24271D2457310007923F /* Chat */,
+				E2E8D7581EB48B60003B6154 /* Developer.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -201,7 +209,7 @@
 					};
 					EBC26D1A1D24415F00838900 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						TestTargetID = EBC26D061D24415F00838900;
 					};
 				};
@@ -343,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E8D7591EB48B60003B6154 /* Developer.swift in Sources */,
 				EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */,
 				EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */,
 			);
@@ -352,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E8D75C1EB48D11003B6154 /* DeveloperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,10 +509,13 @@
 			baseConfigurationReference = 8672D19BF26C279DBF51A859 /* Pods-MaxibonKataIOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MaxibonKataIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.MaxibonKataIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MaxibonKataIOSTests/MaxibonKataIOSTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaxibonKataIOS.app/MaxibonKataIOS";
 			};
@@ -513,10 +526,12 @@
 			baseConfigurationReference = FC8926FF8C641D2683EB9533 /* Pods-MaxibonKataIOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MaxibonKataIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.MaxibonKataIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MaxibonKataIOSTests/MaxibonKataIOSTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaxibonKataIOS.app/MaxibonKataIOS";
 			};
