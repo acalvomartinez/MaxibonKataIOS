@@ -10,6 +10,16 @@ import Foundation
 
 public final class KarumiHQs {
     
+    fileprivate let chat: Chat
+    
+    convenience init() {
+        self.init(chat: Slack()) 
+    }
+    
+    init(chat: Chat) {
+        self.chat = chat
+    }
+    
     var maxibonLeft = 10
     fileprivate var shouldBuyMoreMaxibons: Bool {
         return maxibonLeft <= 2
@@ -25,6 +35,8 @@ public final class KarumiHQs {
             
             if shouldBuyMoreMaxibons {
                 buyMaxibons()
+                
+                alertAboutMaxibons(developer)
             }
         }
     }
@@ -35,7 +47,12 @@ public final class KarumiHQs {
             maxibonLeft = 0
         }
     }
+    
     fileprivate func buyMaxibons() {
         maxibonLeft = maxibonLeft + 10
+    }
+    
+    fileprivate func alertAboutMaxibons(_ developer: Developer) {
+        chat.sendMessage("Hi guys, I'm \(developer.name). We need more maxibons!")
     }
 }
